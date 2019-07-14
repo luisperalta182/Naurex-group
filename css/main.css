@@ -1,0 +1,1899 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+body {
+  background-color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 30px;
+  color: #1c1c1c;
+}
+
+h1, .internals-titles, #join-entire-page-content .join-form-header, #jfi-modal-dialog .join-form-header, .jfi-success-container .join-form-header, #cb-legal-content-block h1, #browse-by-container #browse-by-header p, #after-apply-thank-you-header, #edit-preference-view #edit-preference-title, #subscription-title,
+h2,
+h3,
+h4,
+h5 {
+  color: #0092c8;
+  text-transform: none;
+}
+
+h1, .internals-titles, #join-entire-page-content .join-form-header, #jfi-modal-dialog .join-form-header, .jfi-success-container .join-form-header, #cb-legal-content-block h1, #browse-by-container #browse-by-header p, #after-apply-thank-you-header, #edit-preference-view #edit-preference-title, #subscription-title {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+p {
+  color: #1c1c1c;
+  word-wrap: break-word;
+}
+
+a {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: underline;
+  color: #0092c8;
+}
+
+/**
+* Clear inner floats
+*/
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+/**
+* Hide text while making it readable for screen readers
+* 1. Needed in WebKit-based browsers because of an implementation bug;
+*    See: https://code.google.com/p/chromium/issues/detail?id=457146
+*/
+.hide-text {
+  overflow: hidden;
+  padding: 0;
+  /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+* Hide element while making it readable for screen readers
+* Shamelessly borrowed from HTML5Boilerplate:
+* https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+*/
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.link-center {
+  text-align: center;
+}
+
+.full-wd {
+  width: 100%;
+}
+
+.no-margin, .social-items, .mobile-sort-jobs .mobile-dropdown-sort ul {
+  margin: 0px;
+}
+
+.no-padding, .social-items {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+img {
+  margin: 0 auto;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE (non-standard property) */
+}
+
+video {
+  width: 100%;
+}
+
+.top-social {
+  background-color: #fff;
+}
+
+.top-social .top-header {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: table;
+  height: 40px;
+  width: 100%;
+}
+
+.top-social .top-header .social-icons {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.top-social .top-header .social-icons a {
+  color: #0092c8;
+  font-size: 13px;
+  padding: 3px;
+}
+
+.top-social .top-header .social-icons a:hover, .top-social .top-header .social-icons a:active, .top-social .top-header .social-icons a:focus {
+  background-color: #eeeeee;
+  text-decoration: none;
+}
+
+.top-social .top-header #locale-widget-desktop-container:before {
+  content: "\f0ac";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #1a1c20;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.top-social .top-header #locale-widget-desktop-container a {
+  color: #0092c8;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+
+.top-social .top-header #locale-widget-desktop-container a:hover, .top-social .top-header #locale-widget-desktop-container a:active, .top-social .top-header #locale-widget-desktop-container a:focus {
+  color: #0092c8;
+  background-color: transparent;
+}
+
+.top-social .top-header #locale-widget-desktop-container .dropdown-menu {
+  background-color: #fff;
+  right: 0px;
+  left: auto;
+}
+
+.top-social .top-header #locale-widget-desktop-container .dropdown-menu span {
+  color: #0092c8;
+  font-size: 13px;
+}
+
+.top-social .top-header #locale-widget-desktop-container .dropdown-menu a {
+  color: #0092c8;
+  font-size: 13px;
+  background-color: transparent;
+  text-transform: uppercase;
+  padding: 8px 20px;
+}
+
+.top-social .top-header #locale-widget-desktop-container .dropdown-menu a:hover, .top-social .top-header #locale-widget-desktop-container .dropdown-menu a:active, .top-social .top-header #locale-widget-desktop-container .dropdown-menu a:focus {
+  color: #fff;
+  background-color: #0092c8;
+}
+
+.top-social .top-header #locale-widget-desktop-container .dropdown-menu a.locale-widget-fr-FR-option:before {
+  content: "";
+  background: url("../img/flag-fr.png") no-repeat center center;
+  background-size: cover;
+  width: 18px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 6px;
+}
+
+.top-social .top-header #locale-widget-desktop-container .dropdown-menu a.locale-widget-en-GB-option:before {
+  content: "";
+  background: url("../img/flag-en.png") no-repeat center center;
+  background-size: cover;
+  width: 18px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 6px;
+}
+
+.top-social .top-header #locale-widget-desktop-container .dropdown-menu a.locale-widget-pt-PT-option:before {
+  content: "";
+  background: url("../img/flag-pt.png") no-repeat center center;
+  background-size: cover;
+  width: 18px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 6px;
+}
+
+.navbar-default {
+  background-color: transparent;
+  border-color: inherit;
+  border: none;
+  border-radius: 0px;
+  margin-bottom: 0px;
+  min-height: 0px;
+}
+
+.navbar-default .navbar-header {
+  background-color: #fff;
+  height: auto;
+}
+
+.navbar-default .navbar-header .navbar-brand {
+  max-width: 200px;
+  height: auto;
+  padding: 0px;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.navbar-default .navbar-header .navbar-brand img {
+  width: 100%;
+}
+
+.navbar-default .navbar-toggle {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  margin-top: 25px;
+  border: none;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:active, .navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle.collapsed {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle.collapsed .icon-bar {
+  background-color: #0092c8;
+}
+
+.navbar-default .navbar-toggle.collapsed .icon-bar.top-bar {
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+}
+
+.navbar-default .navbar-toggle.collapsed .icon-bar.middle-bar {
+  opacity: 1;
+}
+
+.navbar-default .navbar-toggle.collapsed .icon-bar.bottom-bar {
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: #0092c8;
+  height: 3px;
+  width: 25px;
+}
+
+.navbar-default .navbar-toggle .icon-bar.top-bar {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 10% 10%;
+  transform-origin: 10% 10%;
+}
+
+.navbar-default .navbar-toggle .icon-bar.middle-bar {
+  opacity: 0;
+}
+
+.navbar-default .navbar-toggle .icon-bar.bottom-bar {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 10% 90%;
+  transform-origin: 10% 90%;
+}
+
+.navbar-default .navbar-collapse {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  background-color: #0092c8;
+}
+
+.navbar-default ul.navbar-nav {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.navbar-default ul.navbar-nav li a, .navbar-default ul.navbar-nav .open ul.dropdown-menu > li > a {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  font-size: 13px;
+  font-weight: normal;
+  color: #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.navbar-default ul.navbar-nav li a:hover, .navbar-default ul.navbar-nav li a:active, .navbar-default ul.navbar-nav li a:focus, .navbar-default ul.navbar-nav .open ul.dropdown-menu > li > a:hover, .navbar-default ul.navbar-nav .open ul.dropdown-menu > li > a:active, .navbar-default ul.navbar-nav .open ul.dropdown-menu > li > a:focus {
+  background-color: #007caa;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-default ul.navbar-nav li.active > a {
+  background-color: #007caa;
+  color: #fff;
+}
+
+.navbar-default ul.navbar-nav li.active > a:hover, .navbar-default ul.navbar-nav li.active > a:active, .navbar-default ul.navbar-nav li.active > a:focus {
+  background-color: #00668c;
+  color: #fff;
+}
+
+.navbar-default ul.navbar-nav li.dropdown i.fa.fa-angle-down {
+  padding-left: 5px;
+}
+
+.navbar-default ul.navbar-nav li.dropdown i.fa.fa-angle-down:before {
+  content: "\f107";
+}
+
+.navbar-default ul.navbar-nav li.dropdown.open > a {
+  background-color: #0092c8;
+  color: #fff;
+}
+
+.navbar-default ul.navbar-nav li.dropdown.open ul.dropdown-menu {
+  background-color: #1a9dce;
+  color: #fff;
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.navbar-default ul.navbar-nav li.dropdown.open ul.dropdown-menu > li > a:hover, .navbar-default ul.navbar-nav li.dropdown.open ul.dropdown-menu > li > a:active, .navbar-default ul.navbar-nav li.dropdown.open ul.dropdown-menu > li > a:focus {
+  background-color: #0092c8;
+  color: #fff;
+}
+
+.navbar-default ul.navbar-nav li.dropdown.open ul.dropdown-menu > li.active > a {
+  background-color: #0092c8;
+  color: #fff;
+}
+
+.navbar-default ul.navbar-nav li.dropdown.open ul.dropdown-menu > li.active > a:hover, .navbar-default ul.navbar-nav li.dropdown.open ul.dropdown-menu > li.active > a:active, .navbar-default ul.navbar-nav li.dropdown.open ul.dropdown-menu > li.active > a:focus {
+  background-color: #007caa;
+  color: #fff;
+}
+
+.search-toggle-button-mobile {
+  color: #0092c8;
+  font-size: 16px;
+  font-weight: bold;
+  width: inherit;
+  border-radius: 0px;
+  margin-top: 0px;
+  margin-right: 8px;
+  position: absolute;
+  top: 55px;
+  right: 50px;
+  z-index: 3;
+}
+
+.search-toggle-button-mobile.collapsed {
+  color: #0092c8;
+}
+
+@media (min-width: 768px) {
+  .top-social .top-header {
+    height: 50px;
+  }
+  .top-social .top-header .social-icons a {
+    font-size: 13px;
+    padding: 5px;
+  }
+  .top-navbar .navbar-brand-tablet {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .top-navbar .navbar-brand-tablet .logo-tablet {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .top-navbar .navbar-brand-tablet .join-top-tablet {
+    text-align: right;
+    padding-bottom: 25px;
+  }
+  .top-navbar .navbar-brand-tablet .join-top-tablet .btn-join {
+    display: inline-block;
+  }
+  .navbar-default {
+    background-color: transparent;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-default .navbar-header {
+    background-color: transparent;
+    float: none;
+  }
+  .navbar-default .navbar-header .navbar-brand {
+    max-width: none;
+    margin: 0px;
+  }
+  .navbar-default .navbar-collapse {
+    background-color: #fff;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 2px;
+  }
+  .navbar-default ul.navbar-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0 auto;
+    float: none;
+  }
+  .navbar-default ul.navbar-nav li {
+    display: block;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+  }
+  .navbar-default ul.navbar-nav li a, .navbar-default ul.navbar-nav .open ul.dropdown-menu > li > a {
+    font-size: 13px;
+    color: #1c1c1c;
+    word-break: normal;
+    white-space: nowrap;
+    padding: 10px 10px;
+  }
+  .navbar-default ul.navbar-nav li a:hover, .navbar-default ul.navbar-nav li a:active, .navbar-default ul.navbar-nav li a:focus, .navbar-default ul.navbar-nav .open ul.dropdown-menu > li > a:hover, .navbar-default ul.navbar-nav .open ul.dropdown-menu > li > a:active, .navbar-default ul.navbar-nav .open ul.dropdown-menu > li > a:focus {
+    background-color: transparent;
+    color: #0092c8;
+    text-decoration: none;
+  }
+  .navbar-default ul.navbar-nav.pt-pt li a, .navbar-default ul.navbar-nav.pt-pt .open ul.dropdown-menu > li > a {
+    padding: 10px 5px;
+    font-size: 11px;
+  }
+  .navbar-default ul.navbar-nav li.active > a {
+    background-color: #0092c8;
+    color: #fff;
+  }
+  .navbar-default ul.navbar-nav li.active > a:hover, .navbar-default ul.navbar-nav li.active > a:active, .navbar-default ul.navbar-nav li.active > a:focus {
+    background-color: #00668c;
+    color: #fff;
+  }
+  .navbar-default ul.navbar-nav li.dropdown.open > a {
+    background-color: transparent;
+    color: #0092c8;
+  }
+  .navbar-default ul.navbar-nav li.dropdown.open ul.dropdown-menu {
+    background-color: #1a9dce;
+    color: #fff;
+    text-align: left;
+    border: none;
+    width: 240px;
+    margin-top: 20px;
+  }
+  .navbar-default ul.navbar-nav li.dropdown.open ul.dropdown-menu > li {
+    border: none;
+  }
+  .navbar-default ul.navbar-nav li.dropdown.open ul.dropdown-menu > li > a {
+    color: #fff;
+    word-break: break-word;
+    white-space: normal;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-default .navbar-header {
+    float: none;
+  }
+  .navbar-default ul.navbar-nav {
+    float: none;
+  }
+  .navbar-default ul.navbar-nav.pt-pt li a, .navbar-default ul.navbar-nav.pt-pt .open ul.dropdown-menu > li > a {
+    padding: 10px 10px;
+    font-size: 13px;
+  }
+  .navbar-default ul.navbar-nav li.dropdown.open ul.dropdown-menu {
+    width: 305px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar-default {
+    padding-bottom: 20px;
+  }
+  .navbar-default .navbar-header {
+    float: left;
+  }
+  .navbar-default .navbar-header .navbar-brand {
+    margin-top: -28px;
+    z-index: 1;
+  }
+  .navbar-default ul.navbar-nav {
+    padding-left: 30px;
+    padding-top: 15px;
+  }
+  .navbar-default ul.navbar-nav.pt-pt li a, .navbar-default ul.navbar-nav.pt-pt .open ul.dropdown-menu > li > a {
+    padding: 10px 5px;
+  }
+  .navbar-default ul.navbar-nav li.dropdown.open ul.dropdown-menu {
+    width: 285px;
+    margin-top: 23px;
+  }
+}
+
+footer {
+  background-color: #1a1c20;
+}
+
+.footer-top {
+  padding: 15px 0px;
+}
+
+.footer-top ul {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.footer-top ul li a {
+  font-size: 12px;
+  color: #c6c6c6;
+  text-transform: uppercase;
+}
+
+.footer-top ul li a:hover, .footer-top ul li a:active, .footer-top ul li a:focus {
+  text-decoration: none;
+  color: #0092c8;
+}
+
+@media (min-width: 768px) {
+  .footer-top ul li:after {
+    content: "·";
+    display: inline-block;
+    padding-left: 12px;
+    font-size: 12px;
+    color: #fff;
+  }
+  .footer-top ul li:last-child:after {
+    display: none;
+  }
+}
+
+.btn-general, .btn-general.active.focus, .btn-general.active:focus, .btn-general.active:hover, .btn-general.focus:active, .btn-general:active:focus, .btn-general:active:hover, .btn-join, .btn-join.active.focus, .btn-join.active:focus, .btn-join.active:hover, .btn-join.focus:active, .btn-join:active:focus, .btn-join:active:hover, .primary-button, .btn-default, .primary-button.active.focus, .primary-button.active:focus, .primary-button.active:hover, .primary-button.focus:active, .primary-button:active:focus, .primary-button:active:hover, .btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default.focus:active, .btn-default:active:focus, .btn-default:active:hover, .internals-buttons, #join-entire-page-content #join-button-mobile, #join-entire-page-content #join-button, #join-entire-page-content #jfi-apply, #jfi-modal-dialog #join-button-mobile, #jfi-modal-dialog #join-button, #jfi-modal-dialog #jfi-apply, .jfi-success-container #join-button-mobile, .jfi-success-container #join-button, .jfi-success-container #jfi-apply, #job-results .primary-button.search-jobs-button-404, #edit-preference-view #edit-preference-form #edit-preference-update-btn, #subscription-form #subscription-save-btn, .jrp-pagination-row .mobile-pagination .next-mobile-page,
+.jrp-pagination-row .mobile-pagination .previous-mobile-page, #jdp-apply-button-top, #jdp-apply-button-bottom, #jdp-apply-button-top-mobile, #jdp-apply-button-bottom-mobile {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: #0092c8;
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  border-radius: 0px;
+  font-weight: bold;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.btn-general:hover, .btn-general.active:hover, .btn-general:hover:active, .btn-join:hover, .btn-join.active:hover, .btn-join:hover:active, .primary-button:hover, .btn-default:hover, .primary-button.active:hover, .primary-button:hover:active, .btn-default.active:hover, .btn-default:hover:active, .internals-buttons:hover, #join-entire-page-content #join-button-mobile:hover, #join-entire-page-content #join-button:hover, #join-entire-page-content #jfi-apply:hover, #jfi-modal-dialog #join-button-mobile:hover, #jfi-modal-dialog #join-button:hover, #jfi-modal-dialog #jfi-apply:hover, .jfi-success-container #join-button-mobile:hover, .jfi-success-container #join-button:hover, .jfi-success-container #jfi-apply:hover, #job-results .primary-button.search-jobs-button-404:hover, #edit-preference-view #edit-preference-form #edit-preference-update-btn:hover, #subscription-form #subscription-save-btn:hover, .jrp-pagination-row .mobile-pagination .next-mobile-page:hover,
+.jrp-pagination-row .mobile-pagination .previous-mobile-page:hover, #jdp-apply-button-top:hover, #jdp-apply-button-bottom:hover, #jdp-apply-button-top-mobile:hover, #jdp-apply-button-bottom-mobile:hover, .btn-general:active, .btn-general.focus:active, .btn-general:active:focus, .btn-general:active:hover, .btn-join:active, .btn-join.focus:active, .btn-join:active:focus, .btn-join:active:hover, .primary-button:active, .btn-default:active, .primary-button.focus:active, .primary-button:active:focus, .primary-button:active:hover, .btn-default.focus:active, .btn-default:active:focus, .btn-default:active:hover, .internals-buttons:active, #join-entire-page-content #join-button-mobile:active, #join-entire-page-content #join-button:active, #join-entire-page-content #jfi-apply:active, #jfi-modal-dialog #join-button-mobile:active, #jfi-modal-dialog #join-button:active, #jfi-modal-dialog #jfi-apply:active, .jfi-success-container #join-button-mobile:active, .jfi-success-container #join-button:active, .jfi-success-container #jfi-apply:active, #job-results .primary-button.search-jobs-button-404:active, #edit-preference-view #edit-preference-form #edit-preference-update-btn:active, #subscription-form #subscription-save-btn:active, .jrp-pagination-row .mobile-pagination .next-mobile-page:active,
+.jrp-pagination-row .mobile-pagination .previous-mobile-page:active, #jdp-apply-button-top:active, #jdp-apply-button-bottom:active, #jdp-apply-button-top-mobile:active, #jdp-apply-button-bottom-mobile:active, .btn-general:focus, .btn-general.active:focus, .btn-general:focus:active, .btn-join:focus, .btn-join.active:focus, .btn-join:focus:active, .primary-button:focus, .btn-default:focus, .primary-button.active:focus, .primary-button:focus:active, .btn-default.active:focus, .btn-default:focus:active, .internals-buttons:focus, #join-entire-page-content #join-button-mobile:focus, #join-entire-page-content #join-button:focus, #join-entire-page-content #jfi-apply:focus, #jfi-modal-dialog #join-button-mobile:focus, #jfi-modal-dialog #join-button:focus, #jfi-modal-dialog #jfi-apply:focus, .jfi-success-container #join-button-mobile:focus, .jfi-success-container #join-button:focus, .jfi-success-container #jfi-apply:focus, #job-results .primary-button.search-jobs-button-404:focus, #edit-preference-view #edit-preference-form #edit-preference-update-btn:focus, #subscription-form #subscription-save-btn:focus, .jrp-pagination-row .mobile-pagination .next-mobile-page:focus,
+.jrp-pagination-row .mobile-pagination .previous-mobile-page:focus, #jdp-apply-button-top:focus, #jdp-apply-button-bottom:focus, #jdp-apply-button-top-mobile:focus, #jdp-apply-button-bottom-mobile:focus {
+  background-color: #00668c;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+}
+
+.btn-join, .btn-join.active.focus, .btn-join.active:focus, .btn-join.active:hover, .btn-join.focus:active, .btn-join:active:focus, .btn-join:active:hover {
+  position: relative;
+  display: block;
+}
+
+.carousel-fade .carousel-inner .item {
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+.custom-carousel {
+  background-color: #fff;
+}
+
+.custom-carousel .indicators-container {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: auto;
+  margin: 0 auto;
+}
+
+.custom-carousel .indicators-container .carousel-indicators {
+  text-align: center;
+  width: auto;
+  margin: 0px 15px;
+  left: 0px;
+  right: auto;
+}
+
+.custom-carousel .indicators-container .carousel-indicators li {
+  background-color: transparent;
+  border: 1px solid #0092c8;
+  width: 15px;
+  height: 15px;
+  margin: 0px;
+}
+
+.custom-carousel .indicators-container .carousel-indicators .active {
+  background-color: #0092c8;
+  border: 1px solid #0092c8;
+  width: 15px;
+  height: 15px;
+}
+
+@media (min-width: 768px) {
+  .custom-carousel .indicators-container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .custom-carousel .indicators-container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .custom-carousel .indicators-container {
+    width: 1170px;
+  }
+}
+
+/*** Styles related to social media icons
+* Specific styles for social items on header or footer please
+* use header o footer file
+***/
+.social-items {
+  list-style: none;
+  text-align: right;
+}
+
+.social-items li {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.custom-social {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #fff;
+  background: transparent;
+  padding: 6px 12px;
+  border-radius: 50%;
+  border: 1px solid #ffcc00;
+}
+
+.facebook-icon:hover, .facebook-icon:active, .facebook-icon:focus {
+  color: #fff;
+  background: #3d5b9b;
+  border: 1px solid #3d5b9b;
+}
+
+.twitter-icon:hover, .twitter-icon:active, .twitter-icon:focus {
+  color: #fff;
+  background: #61a9db;
+  border: 1px solid #61a9db;
+}
+
+.linkedin-icon:hover, .linkedin-icon:active, .linkedin-icon:focus {
+  color: #fff;
+  background: #0e76b5;
+  border: 1px solid #0e76b5;
+}
+
+.youtube-icon:hover, .youtube-icon:active, .youtube-icon:focus {
+  color: #fff;
+  background: #e52e2a;
+  border: 1px solid #e52e2a;
+}
+
+.instagram-icon:hover, .instagram-icon:active, .instagram-icon:focus {
+  color: #fff;
+  background: -webkit-radial-gradient(30% 107% circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  background: -o-radial-gradient(30% 107% circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  border: 1px solid #fd5949;
+}
+
+.pinterest-icon:hover, .pinterest-icon:active, .pinterest-icon:focus {
+  color: #fff;
+  background: #cb2027;
+  border: 1px solid #cb2027;
+}
+
+.rss-icon:hover, .rss-icon:active, .rss-icon:focus {
+  color: #fff;
+  background: -webkit-linear-gradient(315deg, #ff4d03 20%, #ffb67c 40%, #ff4d03 100%);
+  background: -o-linear-gradient(315deg, #ff4d03 20%, #ffb67c 40%, #ff4d03 100%);
+  background: linear-gradient(135deg, #ff4d03 20%, #ffb67c 40%, #ff4d03 100%);
+  border: 1px solid #ff4d03;
+}
+
+.glassdoor-icon:hover, .glassdoor-icon:active, .glassdoor-icon:focus {
+  color: #fff;
+  background: #7cb229;
+  border: 1px solid #7cb229;
+}
+
+.search-mobile, .search-desktop-home, .search-desktop, #search-widget {
+  background-color: transparent;
+  position: absolute;
+  bottom: 50px;
+  top: auto;
+  left: 0px;
+  right: 0px;
+}
+
+.search-mobile .search-box, .search-desktop-home .search-box, .search-desktop .search-box, #search-widget .search-box {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.search-mobile #search-bar, .search-desktop-home #search-bar, .search-desktop #search-bar, #search-widget #search-bar {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.search-mobile #search-bar .search-bar-element, .search-desktop-home #search-bar .search-bar-element, .search-desktop #search-bar .search-bar-element, #search-widget #search-bar .search-bar-element {
+  padding-bottom: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.search-mobile #search-bar .search-bar-element input, .search-desktop-home #search-bar .search-bar-element input, .search-desktop #search-bar .search-bar-element input, #search-widget #search-bar .search-bar-element input {
+  color: #1c1c1c;
+  height: 40px;
+  border: none;
+  border-radius: 0px;
+}
+
+.search-mobile #search-bar .search-bar-element input::-webkit-input-placeholder, .search-desktop-home #search-bar .search-bar-element input::-webkit-input-placeholder, .search-desktop #search-bar .search-bar-element input::-webkit-input-placeholder, #search-widget #search-bar .search-bar-element input::-webkit-input-placeholder {
+  color: #1c1c1c;
+}
+
+.search-mobile #search-bar .search-bar-element input:-moz-placeholder, .search-desktop-home #search-bar .search-bar-element input:-moz-placeholder, .search-desktop #search-bar .search-bar-element input:-moz-placeholder, #search-widget #search-bar .search-bar-element input:-moz-placeholder {
+  color: #1c1c1c;
+}
+
+.search-mobile #search-bar .search-bar-element input::-moz-placeholder, .search-desktop-home #search-bar .search-bar-element input::-moz-placeholder, .search-desktop #search-bar .search-bar-element input::-moz-placeholder, #search-widget #search-bar .search-bar-element input::-moz-placeholder {
+  color: #1c1c1c;
+}
+
+.search-mobile #search-bar .search-bar-element input:-ms-input-placeholder, .search-desktop-home #search-bar .search-bar-element input:-ms-input-placeholder, .search-desktop #search-bar .search-bar-element input:-ms-input-placeholder, #search-widget #search-bar .search-bar-element input:-ms-input-placeholder {
+  color: #1c1c1c;
+}
+
+.search-mobile #search-bar .search-bar-element.search-widget-container, .search-desktop-home #search-bar .search-bar-element.search-widget-container, .search-desktop #search-bar .search-bar-element.search-widget-container, #search-widget #search-bar .search-bar-element.search-widget-container {
+  padding-bottom: 10px;
+}
+
+.search-mobile #search-bar .search-bar-element.search-widget-container .search-btn, .search-desktop-home #search-bar .search-bar-element.search-widget-container .search-btn, .search-desktop #search-bar .search-bar-element.search-widget-container .search-btn, #search-widget #search-bar .search-bar-element.search-widget-container .search-btn {
+  display: block;
+  background-color: #0092c8;
+  text-transform: uppercase;
+}
+
+.search-mobile #search-bar .search-bar-element.search-widget-container .search-btn:hover, .search-desktop-home #search-bar .search-bar-element.search-widget-container .search-btn:hover, .search-desktop #search-bar .search-bar-element.search-widget-container .search-btn:hover, #search-widget #search-bar .search-bar-element.search-widget-container .search-btn:hover, .search-mobile #search-bar .search-bar-element.search-widget-container .search-btn:active, .search-desktop-home #search-bar .search-bar-element.search-widget-container .search-btn:active, .search-desktop #search-bar .search-bar-element.search-widget-container .search-btn:active, #search-widget #search-bar .search-bar-element.search-widget-container .search-btn:active, .search-mobile #search-bar .search-bar-element.search-widget-container .search-btn:focus, .search-desktop-home #search-bar .search-bar-element.search-widget-container .search-btn:focus, .search-desktop #search-bar .search-bar-element.search-widget-container .search-btn:focus, #search-widget #search-bar .search-bar-element.search-widget-container .search-btn:focus {
+  background-color: #00668c;
+}
+
+.search-mobile .link-center, .search-desktop-home .link-center, .search-desktop .link-center, #search-widget .link-center {
+  padding-top: 5px;
+}
+
+.search-mobile .link-center .view-all-jobs, .search-desktop-home .link-center .view-all-jobs, .search-desktop .link-center .view-all-jobs, #search-widget .link-center .view-all-jobs {
+  color: #fff;
+  font-weight: normal;
+}
+
+.search-desktop-home, .search-desktop {
+  background-color: transparent;
+}
+
+#search-widget {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .search-mobile, .search-desktop-home, .search-desktop, #search-widget {
+    float: none;
+    background-size: cover;
+    padding: 0px;
+  }
+  .search-desktop-home, .search-desktop, #search-widget {
+    position: absolute;
+    bottom: 70px;
+    top: auto;
+    right: 0px;
+    left: 0px;
+  }
+  .search-desktop-home h1, .search-desktop h1, .search-desktop-home .internals-titles, .search-desktop .internals-titles, .search-desktop-home #join-entire-page-content .join-form-header, #join-entire-page-content .search-desktop-home .join-form-header, .search-desktop #join-entire-page-content .join-form-header, #join-entire-page-content .search-desktop .join-form-header, .search-desktop-home #jfi-modal-dialog .join-form-header, #jfi-modal-dialog .search-desktop-home .join-form-header, .search-desktop #jfi-modal-dialog .join-form-header, #jfi-modal-dialog .search-desktop .join-form-header, .search-desktop-home .jfi-success-container .join-form-header, .jfi-success-container .search-desktop-home .join-form-header, .search-desktop .jfi-success-container .join-form-header, .jfi-success-container .search-desktop .join-form-header, .search-desktop-home #cb-legal-content-block h1, #cb-legal-content-block .search-desktop-home h1, .search-desktop #cb-legal-content-block h1, #cb-legal-content-block .search-desktop h1, .search-desktop-home #browse-by-container #browse-by-header p, #browse-by-container #browse-by-header .search-desktop-home p, .search-desktop #browse-by-container #browse-by-header p, #browse-by-container #browse-by-header .search-desktop p, .search-desktop-home #after-apply-thank-you-header, .search-desktop #after-apply-thank-you-header, .search-desktop-home #edit-preference-view #edit-preference-title, #edit-preference-view .search-desktop-home #edit-preference-title, .search-desktop #edit-preference-view #edit-preference-title, #edit-preference-view .search-desktop #edit-preference-title, .search-desktop-home #subscription-title, .search-desktop #subscription-title, #search-widget h1, #search-widget .internals-titles, #search-widget #join-entire-page-content .join-form-header, #join-entire-page-content #search-widget .join-form-header, #search-widget #jfi-modal-dialog .join-form-header, #jfi-modal-dialog #search-widget .join-form-header, #search-widget .jfi-success-container .join-form-header, .jfi-success-container #search-widget .join-form-header, #search-widget #browse-by-container #browse-by-header p, #browse-by-container #browse-by-header #search-widget p, #search-widget #after-apply-thank-you-header, #search-widget #edit-preference-view #edit-preference-title, #edit-preference-view #search-widget #edit-preference-title, #search-widget #subscription-title {
+    color: #fff;
+    text-align: left;
+  }
+  .search-desktop-home .search-box, .search-desktop .search-box, #search-widget .search-box {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .search-desktop-home .search-box .search-box-row, .search-desktop .search-box .search-box-row, #search-widget .search-box .search-box-row {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .search-desktop-home .search-box .search-box-row .search-box-content, .search-desktop .search-box .search-box-row .search-box-content, #search-widget .search-box .search-box-row .search-box-content {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  .search-desktop-home #search-bar, .search-desktop #search-bar, #search-widget #search-bar {
+    max-width: none;
+    display: table;
+  }
+  .search-desktop-home #search-bar .search-bar-element, .search-desktop #search-bar .search-bar-element, #search-widget #search-bar .search-bar-element {
+    display: table-cell;
+    vertical-align: bottom;
+    width: 50%;
+    padding-right: 15px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+  }
+  .search-desktop-home #search-bar .search-bar-element input, .search-desktop #search-bar .search-bar-element input, #search-widget #search-bar .search-bar-element input {
+    height: 46px;
+  }
+  .search-desktop-home #search-bar .search-bar-element label, .search-desktop #search-bar .search-bar-element label, #search-widget #search-bar .search-bar-element label {
+    color: #fff;
+    text-transform: capitalize;
+  }
+  .search-desktop-home #search-bar .search-bar-element.search-widget-container, .search-desktop #search-bar .search-bar-element.search-widget-container, #search-widget #search-bar .search-bar-element.search-widget-container {
+    vertical-align: bottom;
+    padding-bottom: 0px;
+    padding-right: 0px;
+  }
+  .search-desktop-home #search-bar .search-bar-element.search-widget-container .search-btn, .search-desktop #search-bar .search-bar-element.search-widget-container .search-btn, #search-widget #search-bar .search-bar-element.search-widget-container .search-btn {
+    width: 170px;
+    padding: 8px 15px;
+  }
+  .search-desktop-home .link-center, .search-desktop .link-center, #search-widget .link-center {
+    padding-top: 10px;
+  }
+  .search-desktop-home .link-center .view-all-jobs, .search-desktop .link-center .view-all-jobs, #search-widget .link-center .view-all-jobs {
+    color: #fff;
+  }
+  .search-desktop, #search-widget {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .search-desktop h1, .search-desktop .internals-titles, .search-desktop #join-entire-page-content .join-form-header, #join-entire-page-content .search-desktop .join-form-header, .search-desktop #jfi-modal-dialog .join-form-header, #jfi-modal-dialog .search-desktop .join-form-header, .search-desktop .jfi-success-container .join-form-header, .jfi-success-container .search-desktop .join-form-header, .search-desktop #cb-legal-content-block h1, #cb-legal-content-block .search-desktop h1, .search-desktop #browse-by-container #browse-by-header p, #browse-by-container #browse-by-header .search-desktop p, .search-desktop #after-apply-thank-you-header, .search-desktop #edit-preference-view #edit-preference-title, #edit-preference-view .search-desktop #edit-preference-title, .search-desktop #subscription-title, #search-widget h1, #search-widget .internals-titles, #search-widget #join-entire-page-content .join-form-header, #join-entire-page-content #search-widget .join-form-header, #search-widget #jfi-modal-dialog .join-form-header, #jfi-modal-dialog #search-widget .join-form-header, #search-widget .jfi-success-container .join-form-header, .jfi-success-container #search-widget .join-form-header, #search-widget #browse-by-container #browse-by-header p, #browse-by-container #browse-by-header #search-widget p, #search-widget #after-apply-thank-you-header, #search-widget #edit-preference-view #edit-preference-title, #edit-preference-view #search-widget #edit-preference-title, #search-widget #subscription-title {
+    color: #fff;
+    text-align: left;
+  }
+  .search-desktop .search-box .search-box-row, #search-widget .search-box .search-box-row {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .search-desktop .search-box .search-box-row .search-box-content, #search-widget .search-box .search-box-row .search-box-content {
+    background-color: transparent;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .search-desktop #search-bar .search-bar-element label, #search-widget #search-bar .search-bar-element label {
+    color: #fff;
+  }
+  .search-desktop .link-center .view-all-jobs, #search-widget .link-center .view-all-jobs {
+    color: #fff;
+  }
+  #search-widget {
+    padding: 20px 15px 30px 15px;
+  }
+}
+
+.landing-banner {
+  background: url("../img/content-banner.png") no-repeat center center;
+  background-size: cover;
+  height: 375px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .landing-banner {
+    background: url("../img/content-banner.png") no-repeat center center;
+    background-size: cover;
+    height: 375px;
+    position: relative;
+  }
+  .content-banner {
+    background: url("../img/content-banner.png") no-repeat center center;
+  }
+}
+
+/**/
+/**/
+.internals-section, .legal-page-background {
+  position: relative;
+  background-color: #fff;
+  padding: 30px 0px;
+}
+
+.internals-section.jdp-background, .legal-page-background.jdp-background {
+  background-color: #d6d3cc;
+}
+
+.internals-buttons, #join-entire-page-content #join-button-mobile, #join-entire-page-content #join-button, #join-entire-page-content #jfi-apply, #jfi-modal-dialog #join-button-mobile, #jfi-modal-dialog #join-button, #jfi-modal-dialog #jfi-apply, .jfi-success-container #join-button-mobile, .jfi-success-container #join-button, .jfi-success-container #jfi-apply, #job-results .primary-button.search-jobs-button-404, #edit-preference-view #edit-preference-form #edit-preference-update-btn, #subscription-form #subscription-save-btn, .jrp-pagination-row .mobile-pagination .next-mobile-page,
+.jrp-pagination-row .mobile-pagination .previous-mobile-page, #jdp-apply-button-top, #jdp-apply-button-bottom, #jdp-apply-button-top-mobile, #jdp-apply-button-bottom-mobile {
+  font-size: 13px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  margin-top: 20px;
+  max-width: 250px;
+  display: block;
+  white-space: normal;
+}
+
+.internals-titles, #join-entire-page-content .join-form-header, #jfi-modal-dialog .join-form-header, .jfi-success-container .join-form-header, #cb-legal-content-block h1, #cb-legal-content-block .internals-titles, #browse-by-container #browse-by-header p, #after-apply-thank-you-header, #edit-preference-view #edit-preference-title, #subscription-title {
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+}
+
+/**/
+/**/
+.search-bar-element.search-field-container.search-location-field {
+  position: relative;
+}
+
+.search-bar-element.search-field-container.search-location-field #suggestions {
+  position: absolute;
+  left: 0px !important;
+  right: 0px !important;
+  width: 100% !important;
+  z-index: 100 !important;
+  list-style: none !important;
+}
+
+.search-bar-element.search-field-container.search-location-field #suggestions .list-group-item {
+  color: #1c1c1c;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.search-bar-element.search-field-container.search-location-field #suggestions .list-group-item.active, .search-bar-element.search-field-container.search-location-field #suggestions .list-group-item.active:focus, .search-bar-element.search-field-container.search-location-field #suggestions .list-group-item.active:hover {
+  color: #fff;
+  background-color: #0092c8;
+  border: 1px solid #0092c8;
+}
+
+.search-bar-element.search-field-container.search-location-field #suggestions li.autocompletefooter {
+  height: 25px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/**/
+/**/
+.error-card {
+  background-color: #eee;
+  text-align: center;
+  margin: 30px 0px;
+  padding: 30px;
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.error-card i {
+  font-size: 60px;
+  color: #0092c8;
+}
+
+.error-card h1, .error-card .internals-titles, .error-card #join-entire-page-content .join-form-header, #join-entire-page-content .error-card .join-form-header, .error-card #jfi-modal-dialog .join-form-header, #jfi-modal-dialog .error-card .join-form-header, .error-card .jfi-success-container .join-form-header, .jfi-success-container .error-card .join-form-header, .error-card #cb-legal-content-block h1, #cb-legal-content-block .error-card h1, .error-card #browse-by-container #browse-by-header p, #browse-by-container #browse-by-header .error-card p, .error-card #after-apply-thank-you-header, .error-card #edit-preference-view #edit-preference-title, #edit-preference-view .error-card #edit-preference-title, .error-card #subscription-title, .error-card h2 {
+  color: #1a1c20;
+}
+
+/**/
+/**/
+#join-entire-page-content .row, #jfi-modal-dialog .row, .jfi-success-container .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#join-entire-page-content strong, #join-entire-page-content p, #join-entire-page-content li, #jfi-modal-dialog strong, #jfi-modal-dialog p, #jfi-modal-dialog li, .jfi-success-container strong, .jfi-success-container p, .jfi-success-container li {
+  color: #1c1c1c;
+}
+
+#join-entire-page-content a, #jfi-modal-dialog a, .jfi-success-container a {
+  color: #0092c8;
+  font-size: 13px !important;
+}
+
+#join-entire-page-content a:hover, #join-entire-page-content a:active, #join-entire-page-content a:focus, #jfi-modal-dialog a:hover, #jfi-modal-dialog a:active, #jfi-modal-dialog a:focus, .jfi-success-container a:hover, .jfi-success-container a:active, .jfi-success-container a:focus {
+  color: #0092c8;
+  text-decoration: underline;
+}
+
+#join-entire-page-content .join-is-not-apply-mobile, #join-entire-page-content .join-is-not-apply, #jfi-modal-dialog .join-is-not-apply-mobile, #jfi-modal-dialog .join-is-not-apply, .jfi-success-container .join-is-not-apply-mobile, .jfi-success-container .join-is-not-apply {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+#join-entire-page-content .join-is-not-apply, #jfi-modal-dialog .join-is-not-apply, .jfi-success-container .join-is-not-apply {
+  margin-top: 0px;
+}
+
+#join-entire-page-content #join-button-mobile, #join-entire-page-content #join-button, #join-entire-page-content #jfi-apply, #jfi-modal-dialog #join-button-mobile, #jfi-modal-dialog #join-button, #jfi-modal-dialog #jfi-apply, .jfi-success-container #join-button-mobile, .jfi-success-container #join-button, .jfi-success-container #jfi-apply {
+  margin-top: 0px;
+}
+
+/**/
+/**/
+#cb-legal-content-block {
+  color: #1c1c1c;
+}
+
+#cb-legal-content-block h2, #cb-legal-content-block p {
+  color: #1c1c1c;
+}
+
+#cb-legal-content-block a {
+  color: #0092c8;
+}
+
+#cb-legal-content-block a:hover, #cb-legal-content-block a:active, #cb-legal-content-block a:focus {
+  color: #0092c8;
+  text-decoration: underline;
+}
+
+/**/
+/**/
+#browse-by-container .col-xs-12 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#browse-by-container #browse-by-header {
+  padding-bottom: 20px;
+}
+
+#browse-by-container #browse-by-header p {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+#browse-by-container .browse-by-country-tab {
+  color: #0092c8;
+  font-weight: bold;
+  background-color: #fff;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#browse-by-container .browse-by-country-tab:hover, #browse-by-container .browse-by-country-tab:active, #browse-by-container .browse-by-country-tab:focus {
+  color: #0092c8;
+  font-weight: bold;
+  background-color: #fff;
+  padding-left: 0px;
+  padding-right: 0px;
+  text-decoration: underline;
+}
+
+#browse-by-container .browse-by-element-list .browse-by-element a {
+  color: #0092c8;
+}
+
+#browse-by-container .browse-by-element-list .browse-by-element a:hover, #browse-by-container .browse-by-element-list .browse-by-element a:active, #browse-by-container .browse-by-element-list .browse-by-element a:focus {
+  color: #0092c8;
+  text-decoration: underline;
+}
+
+/**/
+/**/
+#job-results #after-apply-recommended-header, #job-results #after-apply-recommended-subheader {
+  color: #1c1c1c;
+  text-align: center;
+}
+
+#job-results #recommendation-table {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/**/
+/**/
+#edit-preference-view .editPrefPageContainer {
+  width: 100%;
+}
+
+#edit-preference-view .col-xs-12 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#edit-preference-view #edit-preference-instructions h3 {
+  color: #1c1c1c;
+  text-align: center;
+  text-transform: none;
+}
+
+#edit-preference-view #edit-preference-form .alert {
+  text-align: center;
+}
+
+#edit-preference-view #edit-preference-form p {
+  color: #1c1c1c;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: none;
+}
+
+#edit-preference-view #edit-preference-form input {
+  font-size: 13px;
+}
+
+#edit-preference-view #edit-preference-form #edit-preference-update-btn {
+  margin-bottom: 20px;
+}
+
+#edit-preference-view #edit-preference-form #edit-preference-unsubscribe-link {
+  color: #0092c8;
+}
+
+#edit-preference-view #edit-preference-form #edit-preference-unsubscribe-link:hover, #edit-preference-view #edit-preference-form #edit-preference-unsubscribe-link:active, #edit-preference-view #edit-preference-form #edit-preference-unsubscribe-link:focus {
+  text-decoration: underline;
+  color: #0092c8;
+}
+
+/**/
+/**/
+#subscription-form #subscription-instructions .nowrap {
+  white-space: nowrap;
+  padding-left: 0px;
+  padding-top: 0px;
+  font-size: 30px;
+}
+
+#subscription-form #subscription-message-section p {
+  font-weight: bold;
+  text-align: center;
+  margin: 0px;
+}
+
+#subscription-form #subscription-question-section h2 {
+  color: #1c1c1c;
+  font-weight: bold;
+  text-align: left;
+  text-transform: none;
+  padding-bottom: 10px;
+}
+
+#subscription-form #subscription-question-section p {
+  color: #1c1c1c;
+  font-size: 13px;
+  font-weight: normal;
+  text-align: left;
+  text-transform: none;
+  padding-bottom: 10px;
+  margin-left: 25px;
+}
+
+#subscription-form #subscription-question-section input {
+  font-size: 13px;
+  margin-left: 0px;
+}
+
+#subscription-form #subscription-question-section span {
+  color: #1c1c1c;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: none;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+@media (min-width: 768px) {
+  .search-bar-element.search-field-container.search-location-field #suggestions {
+    padding-right: 15px !important;
+  }
+}
+
+.mobile-sort-jobs {
+  padding-bottom: 20px;
+}
+
+.mobile-sort-jobs .mobile-job-count-message {
+  font-size: 18px;
+  display: block;
+  text-align: center;
+}
+
+.mobile-sort-jobs .mobile-dropdown-sort {
+  margin-top: 10px;
+}
+
+.mobile-sort-jobs .mobile-dropdown-sort #mobile-sort-title {
+  color: #0092c8;
+}
+
+.mobile-sort-jobs .mobile-dropdown-sort ul li {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.mobile-sort-jobs .mobile-dropdown-sort ul li a {
+  color: #1a1c20;
+}
+
+.mobile-sort-jobs .mobile-dropdown-sort ul li:hover, .mobile-sort-jobs .mobile-dropdown-sort ul li:active, .mobile-sort-jobs .mobile-dropdown-sort ul li:focus {
+  background-color: #0092c8;
+}
+
+.mobile-sort-jobs .mobile-dropdown-sort ul li:hover a, .mobile-sort-jobs .mobile-dropdown-sort ul li:active a, .mobile-sort-jobs .mobile-dropdown-sort ul li:focus a {
+  color: #fff;
+}
+
+.breadcrumb {
+  background-color: #fff;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  border: none;
+}
+
+.breadcrumb > li a {
+  color: #1a1c20;
+  font-weight: bold;
+}
+
+.breadcrumb > li + li:before {
+  padding: 0 5px;
+  color: #1c1c1c;
+  content: "/\00a0";
+  font-weight: bold;
+}
+
+.breadcrumb > li:first-child {
+  pointer-events: none;
+  cursor: default;
+}
+
+.breadcrumb > li:last-child a {
+  color: #0092c8;
+  font-weight: bold;
+}
+
+.fa-envelope-o {
+  color: #0092c8;
+  background-color: #fff;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 100%;
+  font-size: 18px;
+}
+
+#sign-up-widget {
+  color: #1a1c20;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.pagination > li {
+  text-align: center;
+}
+
+.pagination > li > a, .pagination > li > span, .pagination > li:last-child > a, .pagination > li:last-child > span, .pagination > li:first-child > a, .pagination > li:first-child > span {
+  color: #1a1c20;
+  background-color: #fff;
+  line-height: 35px;
+  padding: 0px;
+  height: 35px;
+  width: 35px;
+}
+
+.pagination > li > a:hover, .pagination > li > a:active, .pagination > li > a:focus, .pagination > li > span:hover, .pagination > li > span:active, .pagination > li > span:focus, .pagination > li:last-child > a:hover, .pagination > li:last-child > a:active, .pagination > li:last-child > a:focus, .pagination > li:last-child > span:hover, .pagination > li:last-child > span:active, .pagination > li:last-child > span:focus, .pagination > li:first-child > a:hover, .pagination > li:first-child > a:active, .pagination > li:first-child > a:focus, .pagination > li:first-child > span:hover, .pagination > li:first-child > span:active, .pagination > li:first-child > span:focus {
+  background-color: #0092c8;
+  color: #fff;
+}
+
+.pagination > li.active > a {
+  background-color: #0092c8;
+  color: #fff;
+}
+
+.pagination > li.active > a:hover, .pagination > li.active > a:active, .pagination > li.active > a:focus {
+  background-color: #007caa;
+}
+
+.search-results-title {
+  font-weight: bold;
+  text-transform: none;
+}
+
+#jrp-desktop-table, #recommendation-table {
+  padding-top: 20px;
+}
+
+#jrp-desktop-facet-col {
+  background-color: #fff;
+}
+
+#jrp-desktop-facet-col #desktop-facets-container {
+  background-color: #fff;
+}
+
+#jrp-desktop-facet-col #desktop-facets-container #narrow-search-header {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #1c1c1c;
+  text-transform: uppercase;
+  background-color: #e8eaeb;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #0092c8;
+  color: #fff;
+}
+
+#jrp-desktop-facet-col #desktop-facets-container #narrow-search-header:hover, #jrp-desktop-facet-col #desktop-facets-container #narrow-search-header:active, #jrp-desktop-facet-col #desktop-facets-container #narrow-search-header:focus {
+  background-color: #a2a4a5;
+}
+
+#jrp-desktop-facet-col #desktop-facets-container #narrow-search-header:hover, #jrp-desktop-facet-col #desktop-facets-container #narrow-search-header:active, #jrp-desktop-facet-col #desktop-facets-container #narrow-search-header:focus {
+  background-color: #00668c;
+}
+
+#jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body {
+  background-color: #fff;
+}
+
+#jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets {
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0px;
+  padding-bottom: 10px;
+}
+
+#jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .facet-collapsable {
+  border: 5px solid #0092c8;
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #0092c8;
+}
+
+#jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets:last-child {
+  padding-bottom: 10px;
+}
+
+#jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-category-header {
+  color: #1c1c1c;
+  background-color: #e8eaeb;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 9px 0px 10px 20px;
+  margin: 0px;
+  width: 100%;
+  background-color: #0092c8;
+  color: #fff;
+}
+
+#jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-item-container {
+  color: #1c1c1c;
+  background-color: #fff;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-top: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+}
+
+#jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-item-container a, #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-item-container span {
+  text-transform: capitalize;
+}
+
+#jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-item-container:first-child {
+  border-top: 1px solid #ccc;
+}
+
+#jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-item-container .caret-facet-accent {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: #1c1c1c;
+}
+
+#jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-item-container:hover, #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-item-container:active, #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-item-container:focus {
+  background-color: #d9eff7;
+}
+
+#jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .selected-caret-facet-item-container {
+  color: #0092c8;
+  background-color: #fff;
+  width: 100%;
+  margin: 0px;
+}
+
+#jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .view-facet-btn-container {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+  padding: 5px 0px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+#jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .view-facet-btn-container .view_facet_text {
+  color: #0092c8;
+}
+
+#jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .view-facet-btn-container .view_facet_text:hover, #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .view-facet-btn-container .view_facet_text:active, #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .view-facet-btn-container .view_facet_text:focus {
+  text-decoration: underline;
+}
+
+#jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .view-facet-btn-container .view_facet_text:before {
+  content: '\f067';
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
+#job-result-table .job-result-header, #recommendation-table .job-result-header {
+  background-color: #d6d3cc;
+  padding: 8px;
+  min-width: 165px;
+}
+
+#job-result-table .job-result-header a, #job-result-table .job-result-header span, #job-result-table .job-result-header .job-table-header-title, #job-result-table .job-result-header .job-table-header-location, #job-result-table .job-result-header .job-table-header-date-posted, #recommendation-table .job-result-header a, #recommendation-table .job-result-header span, #recommendation-table .job-result-header .job-table-header-title, #recommendation-table .job-result-header .job-table-header-location, #recommendation-table .job-result-header .job-table-header-date-posted {
+  color: #0092c8;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+}
+
+#job-result-table .job-result-header a:hover, #job-result-table .job-result-header a:active, #job-result-table .job-result-header a:focus, #job-result-table .job-result-header span:hover, #job-result-table .job-result-header span:active, #job-result-table .job-result-header span:focus, #job-result-table .job-result-header .job-table-header-title:hover, #job-result-table .job-result-header .job-table-header-title:active, #job-result-table .job-result-header .job-table-header-title:focus, #job-result-table .job-result-header .job-table-header-location:hover, #job-result-table .job-result-header .job-table-header-location:active, #job-result-table .job-result-header .job-table-header-location:focus, #job-result-table .job-result-header .job-table-header-date-posted:hover, #job-result-table .job-result-header .job-table-header-date-posted:active, #job-result-table .job-result-header .job-table-header-date-posted:focus, #recommendation-table .job-result-header a:hover, #recommendation-table .job-result-header a:active, #recommendation-table .job-result-header a:focus, #recommendation-table .job-result-header span:hover, #recommendation-table .job-result-header span:active, #recommendation-table .job-result-header span:focus, #recommendation-table .job-result-header .job-table-header-title:hover, #recommendation-table .job-result-header .job-table-header-title:active, #recommendation-table .job-result-header .job-table-header-title:focus, #recommendation-table .job-result-header .job-table-header-location:hover, #recommendation-table .job-result-header .job-table-header-location:active, #recommendation-table .job-result-header .job-table-header-location:focus, #recommendation-table .job-result-header .job-table-header-date-posted:hover, #recommendation-table .job-result-header .job-table-header-date-posted:active, #recommendation-table .job-result-header .job-table-header-date-posted:focus {
+  text-decoration: none;
+}
+
+#job-result-table .job-result-header .job-table-header-title, #job-result-table .job-result-header .job-table-header-location, #job-result-table .job-result-header .job-table-header-date-posted, #recommendation-table .job-result-header .job-table-header-title, #recommendation-table .job-result-header .job-table-header-location, #recommendation-table .job-result-header .job-table-header-date-posted {
+  display: table-cell;
+}
+
+#job-result-table .job-result-header .glyphicon-menu-down, #job-result-table .job-result-header .glyphicon-menu-up, #recommendation-table .job-result-header .glyphicon-menu-down, #recommendation-table .job-result-header .glyphicon-menu-up {
+  color: #1a1c20;
+}
+
+#job-result-table .job-result, #recommendation-table .job-result {
+  font-size: 13px;
+  border-top: solid 1px #ccc;
+}
+
+#job-result-table .job-result td .job-result-title, #recommendation-table .job-result td .job-result-title {
+  color: #0092c8;
+  font-weight: bold;
+}
+
+#job-result-table .job-result td .job-result-title:hover, #job-result-table .job-result td .job-result-title:active, #job-result-table .job-result td .job-result-title:focus, #recommendation-table .job-result td .job-result-title:hover, #recommendation-table .job-result td .job-result-title:active, #recommendation-table .job-result td .job-result-title:focus {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#job-result-table .job-result td.job-result-company-cell, #job-result-table .job-result td.job-result-location-cell, #job-result-table .job-result td.job-result-date-posted-cell, #recommendation-table .job-result td.job-result-company-cell, #recommendation-table .job-result td.job-result-location-cell, #recommendation-table .job-result td.job-result-date-posted-cell {
+  color: #1c1c1c;
+}
+
+#job-result-table .job-result td.job-table-element-arrow a, #recommendation-table .job-result td.job-table-element-arrow a {
+  color: #0092c8;
+}
+
+#job-result-table .job-result td.job-table-element-arrow a:hover, #job-result-table .job-result td.job-table-element-arrow a:active, #job-result-table .job-result td.job-table-element-arrow a:focus, #recommendation-table .job-result td.job-table-element-arrow a:hover, #recommendation-table .job-result td.job-table-element-arrow a:active, #recommendation-table .job-result td.job-table-element-arrow a:focus {
+  color: #0092c8;
+}
+
+#job-result-table .job-result:hover, #job-result-table .job-result:active, #job-result-table .job-result:focus, #recommendation-table .job-result:hover, #recommendation-table .job-result:active, #recommendation-table .job-result:focus {
+  background-color: #d9eff7;
+}
+
+#no-jobs-message {
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.jrp-pagination-row .mobile-pagination {
+  text-align: center;
+}
+
+.jrp-pagination-row .mobile-pagination .next-mobile-page:hover, .jrp-pagination-row .mobile-pagination .next-mobile-page:active, .jrp-pagination-row .mobile-pagination .next-mobile-page:focus,
+.jrp-pagination-row .mobile-pagination .previous-mobile-page:hover,
+.jrp-pagination-row .mobile-pagination .previous-mobile-page:active,
+.jrp-pagination-row .mobile-pagination .previous-mobile-page:focus {
+  background-color: #004964;
+}
+
+@media (min-width: 992px) {
+  #jrp-desktop-facet-col .caret-facet-category-header, #job-result-table .job-result-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  #jrp-desktop-facet-col .caret-facet-category-header, #jrp-desktop-facet-col .caret-facet-category-header a, #jrp-desktop-facet-col .caret-facet-category-header span, #jrp-desktop-facet-col .caret-facet-category-header .job-table-header-title, #jrp-desktop-facet-col .caret-facet-category-header .job-table-header-location, #jrp-desktop-facet-col .caret-facet-category-header .job-table-header-date-posted, #job-result-table .job-result-header, #job-result-table .job-result-header a, #job-result-table .job-result-header span, #job-result-table .job-result-header .job-table-header-title, #job-result-table .job-result-header .job-table-header-location, #job-result-table .job-result-header .job-table-header-date-posted {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  #jrp-desktop-facet-col #desktop-facets-container #narrow-search-header {
+    display: none;
+  }
+  #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body {
+    margin-top: 0px;
+  }
+  #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets {
+    padding-bottom: 25px;
+  }
+  #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets:last-child {
+    padding-bottom: 25px;
+  }
+  #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-category-header {
+    padding: 10px 0px 10px 14px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-item-container {
+    margin: 0px;
+  }
+  #job-result-table .job-result-header, #recommendation-table .job-result-header {
+    min-width: 215px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #jrp-desktop-facet-col .caret-facet-category-header, #jrp-desktop-facet-col .caret-facet-category-header a, #jrp-desktop-facet-col .caret-facet-category-header span, #jrp-desktop-facet-col .caret-facet-category-header .job-table-header-title, #jrp-desktop-facet-col .caret-facet-category-header .job-table-header-location, #jrp-desktop-facet-col .caret-facet-category-header .job-table-header-date-posted, #job-result-table .job-result-header, #job-result-table .job-result-header a, #job-result-table .job-result-header span, #job-result-table .job-result-header .job-table-header-title, #job-result-table .job-result-header .job-table-header-location, #job-result-table .job-result-header .job-table-header-date-posted {
+    font-size: 20px;
+  }
+  #job-result-table .job-result-header, #recommendation-table .job-result-header {
+    min-width: 265px;
+  }
+}
+
+#jdp-apply-section-bottom {
+  width: 185px;
+}
+
+.join-container {
+  line-height: 0px;
+}
+
+#jdp-breadcrumb-row .breadcrumb {
+  background-color: #d6d3cc;
+}
+
+#job-details-page .container .container {
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#jdp-apply-button-top, #jdp-apply-button-bottom, #jdp-apply-button-top-mobile, #jdp-apply-button-bottom-mobile {
+  max-width: 185px;
+  margin: 0 auto;
+}
+
+#jdp-apply-button-top, #jdp-apply-button-top-mobile {
+  background-color: #fff;
+  color: #0092c8;
+}
+
+#jdp-not-ready-to-apply-link-top,
+#jdp-not-ready-to-apply-link-bottom {
+  color: #0092c8;
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+  line-height: 20px;
+}
+
+#jdp-not-ready-to-apply-link-bottom {
+  color: #1c1c1c;
+}
+
+.jdp-title-inner-container {
+  background-color: #d6d3cc;
+  padding: 0px;
+  display: table;
+  width: 100%;
+}
+
+.jdp-title-inner-container .jdp-title-block-position {
+  padding-left: 15px;
+}
+
+.jdp-title-inner-container .jdp-title-block-position .jdp-job-title {
+  color: #0092c8;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.jdp-title-inner-container .jdp-title-block-position #jdp-title-date-posted {
+  color: #1c1c1c;
+}
+
+.job-details-content {
+  background-color: #d6d3cc;
+  padding-top: 0px;
+}
+
+.job-details-content .content-card-header {
+  color: #0092c8;
+  font-weight: bold;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.job-details-content #jdp-social-sharing-section {
+  border-top: 3px solid #0092c8;
+}
+
+.job-details-content #jdp-job-snapshot-section {
+  border-top: 3px solid #0092c8;
+}
+
+.job-details-content .jdp-job-snapshot-card {
+  padding: 0px 0px 15px 0px;
+  background-color: #fff;
+}
+
+.job-details-content .jdp-job-snapshot-card .content-card-header {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom: 2px solid #ccc;
+  margin: 0px 20px 0px 20px;
+  padding: 20px 5px 20px 5px;
+}
+
+.job-details-content .jdp-job-snapshot-card .snapshot-padding {
+  padding: 20px;
+  line-height: 30px;
+}
+
+.job-details-content .jdp-job-snapshot-card .snapshot-padding li {
+  padding-bottom: 15px;
+}
+
+.job-details-content .jdp-job-snapshot-card .snapshot-padding li .snapshot-icon.secondary-text-color {
+  color: #0092c8;
+  font-size: 24px;
+  display: table-cell;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+.job-details-content .jdp-job-snapshot-card .snapshot-padding li .snapshot-text {
+  color: #1c1c1c;
+  padding-top: 15px;
+}
+
+.job-details-content .jdp-job-snapshot-card .snapshot-padding li .secondary-text-color {
+  color: #1a1c20;
+  font-weight: normal;
+}
+
+.job-details-content .jdp-job-snapshot-card .snapshot-padding li .job-snapshot-link {
+  color: #26a2d0;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.job-details-content .jdp-job-snapshot-card .snapshot-padding li .job-snapshot-link:hover, .job-details-content .jdp-job-snapshot-card .snapshot-padding li .job-snapshot-link:active, .job-details-content .jdp-job-snapshot-card .snapshot-padding li .job-snapshot-link:focus {
+  text-decoration: underline;
+}
+
+.job-details-content #jdp-job-description-section {
+  background-color: #fff;
+  border-top: 3px solid #0092c8;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.job-details-content #jdp-job-description-section .jdp-job-description-card {
+  padding-top: 0px;
+  margin-bottom: 0px;
+}
+
+.job-details-content #jdp-job-description-section .jdp-job-description-card, .job-details-content #jdp-job-description-section .jdp-job-description-card p, .job-details-content #jdp-job-description-section .jdp-job-description-card li {
+  color: #1c1c1c;
+}
+
+.job-details-content #jdp-job-description-section .jdp-job-description-card a {
+  color: #0092c8;
+}
+
+.job-details-content #jdp-job-description-section .jdp-job-description-card a:hover, .job-details-content #jdp-job-description-section .jdp-job-description-card a:active, .job-details-content #jdp-job-description-section .jdp-job-description-card a:focus {
+  color: #0092c8;
+  text-decoration: underline;
+}
+
+.job-details-content #jdp-job-requirements-section {
+  background-color: #fff;
+  border-top: 3px solid #0092c8;
+}
+
+.job-details-content #jdp-job-requirements-section .jdp-job-requirements-card, .job-details-content #jdp-job-requirements-section .jdp-job-requirements-card p, .job-details-content #jdp-job-requirements-section .jdp-job-requirements-card li {
+  color: #1c1c1c;
+}
+
+.job-details-content #jdp-job-requirements-section .jdp-job-requirements-card a {
+  color: #0092c8;
+}
+
+.job-details-content #jdp-job-requirements-section .jdp-job-requirements-card a:hover, .job-details-content #jdp-job-requirements-section .jdp-job-requirements-card a:active, .job-details-content #jdp-job-requirements-section .jdp-job-requirements-card a:focus {
+  color: #0092c8;
+  text-decoration: underline;
+}
+
+.job-details-content #jdp-bottom-apply-section {
+  margin-top: 20px;
+  background-color: #fff;
+  border-top: 3px solid #0092c8;
+}
+
+.job-details-content #jdp-bottom-apply-section .jdp-bottom-apply-card {
+  padding-bottom: 5px;
+}
+
+.job-details-content #jdp-bottom-apply-section #jdp-bottom-apply-button-col {
+  padding-top: 20px;
+}
+
+.job-details-content #jdp-similar-jobs-row {
+  background-color: #d6d3cc;
+  padding: 10px 0px;
+  margin: 0px;
+}
+
+.job-details-content #jdp-similar-jobs-row h3 {
+  color: #1a1c20;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.job-details-content #jdp-similar-jobs-row .similar-jobs {
+  text-align: center;
+}
+
+.job-details-content #jdp-similar-jobs-row .similar-jobs li .similar-jobs-tag {
+  color: #0092c8;
+}
+
+.job-details-content #jdp-similar-jobs-row .similar-jobs > li + li:before {
+  padding: 0px;
+  content: "";
+}
+
+@media (min-width: 768px) {
+  #jdp-apply-section-top {
+    width: 185px;
+    float: right;
+  }
+  .jdp-title-inner-container .jdp-title-block-position .jdp-job-title {
+    font-size: 36px;
+  }
+  .jdp-title-inner-container .jdp-top-apply-block-position {
+    width: 35%;
+    vertical-align: middle;
+  }
+  .job-details-content #jdp-bottom-apply-section #jdp-bottom-apply-company-logo-col .multi-brand-image {
+    text-align: left;
+  }
+  .job-details-content #jdp-bottom-apply-section #jdp-bottom-apply-button-col {
+    padding-top: 0px;
+  }
+  .job-details-content #jdp-similar-jobs-row h3 {
+    text-align: left;
+  }
+  .job-details-content #jdp-similar-jobs-row .similar-jobs {
+    text-align: left;
+  }
+  .job-details-content #jdp-similar-jobs-row .similar-jobs > li + li:before {
+    padding: 0 0.55em;
+    color: #0092c8;
+    content: "|";
+  }
+  #jdp-apply-button-bottom {
+    margin-left: 0px;
+  }
+  .job-details-content #jdp-bottom-apply-button-col {
+    padding-top: 20px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .job-details-content #jdp-job-snapshot-section {
+    border-top: none;
+  }
+}

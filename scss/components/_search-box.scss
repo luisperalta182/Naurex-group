@@ -1,0 +1,314 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles of search box and parent items
+// -----------------------------------------------------------------------------
+
+// Search Mobile
+.search-mobile{
+  background-color: transparent;
+  position: absolute;
+  bottom: 50px;
+  top: auto;
+  left: 0px;
+  right: 0px;
+
+  // Search box
+  .search-box{
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  // End Search box
+
+  // Search bar
+  #search-bar{
+    max-width: 480px;
+    margin: 0 auto;
+
+    // Search bar elements
+    .search-bar-element{
+      padding-bottom: 15px;
+      padding-left: 0px;
+      padding-right: 0px;
+
+      input{
+        color: $text-color;
+        height: 40px;
+        border: none;
+        border-radius: 0px;
+        // border: 1px solid tint($secondary-color, 15%);
+
+        @include placeholder{
+          color: $text-color;
+        }
+      }
+
+      // Search button container
+      &.search-widget-container{
+        padding-bottom: 10px;
+
+        // Search button
+        .search-btn{
+          display: block;
+          background-color: $primary-color;
+          text-transform: uppercase;
+
+          @include on-event{
+            background-color: shade($primary-color, 30%);
+          }
+        }
+        // End Search button
+      }
+      // Search button container
+    }
+    // End Search bar elements
+  }
+  // End Search bar
+
+  // View all jobs container
+  .link-center{
+    padding-top: 5px;
+
+    // View all jobs
+    .view-all-jobs{
+      color: $white;
+      font-weight: normal;
+    }
+    // End View all jobs
+  }
+  // End View all jobs container
+}
+// End Search Mobile
+
+//
+// Extend Search
+//
+
+// Search desktop home
+.search-desktop-home{
+  @extend .search-mobile;
+  background-color: transparent;
+}
+// End Search desktop home
+
+// Search desktop
+.search-desktop{
+  @extend .search-desktop-home;
+}
+// End Search desktop
+
+// Search Widget (Search & Re-Engage)
+#search-widget{
+  @extend .search-mobile;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+// End Search Widget (Search & Re-Engage)
+
+//
+// End Extend Search
+//
+
+@media (min-width: 768px){
+
+  /// This is a fix for element not using its full space
+  .search-mobile{
+    float: none;
+    background-size: cover;
+    padding: 0px;
+  }
+
+  // Search desktop home
+  .search-desktop-home, #search-widget{
+    position: absolute;
+    bottom: 70px;
+    top: auto;
+    right: 0px;
+    left: 0px;
+
+    h1{
+      color: $white;
+      text-align: left;
+    }
+
+    // Search box
+    .search-box{
+      padding-top: 0px;
+      padding-bottom: 0px;
+
+      // Search box row
+      .search-box-row{
+        padding-left: 15px;
+        padding-right: 15px;
+
+        // Search box content
+        .search-box-content{
+          // background-color: rgba(0,0,0,0.5);
+          padding-left: 30px;
+          padding-right: 30px;
+          padding-top: 10px;
+          padding-bottom: 20px;
+        }
+        // End Search box content
+      }
+      // End Search box row
+    }
+    // End Search box
+
+    // Search bar
+    #search-bar{
+      max-width: none;
+      display: table;
+
+      // Search bar elements
+      .search-bar-element{
+        display: table-cell;
+        vertical-align: bottom;
+        width: 50%;
+        padding-right: 15px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+
+        input{
+          height: 46px;
+
+          @include placeholder{
+          }
+        }
+
+        label{
+          color: $white;
+          // font-weight: normal;
+          text-transform: capitalize;
+        }
+
+        // Search button container
+        &.search-widget-container{
+          vertical-align: bottom;
+          padding-bottom: 0px;
+          padding-right: 0px;
+
+          // Search button
+          .search-btn{
+            // background-color: shade($secondary-color, 25%);
+            width: 170px;
+            padding: 8px 15px;
+
+            @include on-event{
+              // background-color: shade($secondary-color, 50%);
+            }
+          }
+          // End Search button
+        }
+        // End Search button container
+      }
+      // End Search bar elements
+    }
+    // End Search bar
+
+    // View all jobs container
+    .link-center{
+      padding-top: 10px;
+
+      // View all jobs
+      .view-all-jobs{
+        color: $white;
+        // font-weight: bold;
+      }
+      // End View all jobs
+    }
+    // End View all jobs container
+  }
+  // End Search desktop home
+
+  // Search desktop & Search Widget (Search & Re-Engage)
+  .search-desktop, #search-widget{
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+
+    background-color: rgba(0,0,0,0.5);
+
+    h1{
+      color: $white;
+      text-align: left;
+    }
+
+    // Search box
+    .search-box{
+      // Search box row
+      .search-box-row{
+        padding-left: 0px;
+        padding-right: 0px;
+
+        // Search box content
+        .search-box-content{
+          background-color: transparent;
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+        // End Search box content
+      }
+      // End Search box row
+    }
+    // End Search box
+
+    // Search bar
+    #search-bar{
+      // Search bar elements
+      .search-bar-element{
+        input{
+
+          @include placeholder{
+          }
+        }
+
+        label{
+          color: $white;
+        }
+
+        // Search button container
+        &.search-widget-container{
+          // Search button
+          .search-btn{
+            // background-color: shade($third-color, 25%);
+
+            @include on-event{
+              // background-color: shade($third-color, 50%);
+            }
+          }
+          // End Search button
+        }
+        // End Search button container
+      }
+      // End Search bar elements
+    }
+    // End Search bar
+
+    // View all jobs container
+    .link-center{
+
+      // View all jobs
+      .view-all-jobs{
+        color: $white;
+      }
+      // End View all jobs
+    }
+    // End View all jobs container
+  }
+  // End Search desktop & Search Widget (Search & Re-Engage)
+
+  // Search Widget (Search & Re-Engage)
+  #search-widget{
+    padding: 20px 15px 30px 15px;
+  }
+  // End Search Widget (Search & Re-Engage)
+}
+
+@media (min-width:992px){
+
+}
+
+@media (min-width: 1200px){
+
+}

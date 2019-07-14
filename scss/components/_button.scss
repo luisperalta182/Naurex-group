@@ -1,0 +1,63 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn-general{
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: $btncolor;
+  padding: 10px 15px;
+  color: $white;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  border-radius: 0px;
+
+  font-weight: bold;
+
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+
+  @include on-event{
+    background-color: shade($hover-color, 30%);
+    text-decoration: none;
+    color: $white;
+    border: none;
+  }
+
+  &.active, &:active{
+    &.focus, &:focus, &:hover{
+      @extend .btn-general;
+    }
+  }
+}
+
+// Join our talent network button
+.btn-join{
+  @extend .btn-general;
+
+  position: relative;
+  display: block;
+
+  &.active, &:active{
+    &.focus, &:focus, &:hover{
+      @extend .btn-join;
+    }
+  }
+}
+// End Join our talent network button
+
+// Override buttons behavior
+.primary-button, .btn-default{
+  @extend .btn-general;
+
+  &.active, &:active{
+    &.focus, &:focus, &:hover{
+      @extend .btn-general;
+    }
+  }
+}
+// End Override btn default behavior

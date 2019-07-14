@@ -1,0 +1,769 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the job results page (JRP).
+// -----------------------------------------------------------------------------
+
+// MOBILE SORT JOBS
+.mobile-sort-jobs{
+  padding-bottom: 20px;
+
+  // Jobs sorted by
+  .mobile-job-count-message{
+    font-size: 18px;
+    display: block;
+    text-align: center;
+  }
+  // End Jobs sorted by
+
+  // Jobs sorted by dropdown
+  .mobile-dropdown-sort{
+    margin-top: 10px;
+
+    #mobile-sort-title{
+      color: $hover-color;
+    }
+
+    // Sorted by list
+    ul{
+      @extend .no-margin;
+
+      li{
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+
+        a{
+          color: $secondary-color;
+        }
+
+        @include on-event{
+          background-color: $hover-color;
+
+          a{
+            color: $white;
+          }
+        }
+      }
+    }
+    // End Sorted by list
+  }
+  // End Jobs sorted by dropdown
+}
+// END MOBILE SORT JOBS
+
+
+// BREADCRUMB -> JOB RESULTS PAGE CONTENT, JOB DETAILS PAGE CONTENT & BROWSE BY PAGE CONTENT
+.breadcrumb{
+  background-color: $body-color;
+  margin-bottom: 0px;
+  border-radius: 0px; // <- Always
+  border: none; // <- Always
+
+  // Breadcrumb items
+  >li{
+    a{
+      color: $secondary-color;
+      font-weight: bold;
+    }
+
+    // Breadcrumb items separator (/)
+    +li:before{
+      padding: 0 5px;
+      color: $text-color;
+      content: "/\00a0";
+      font-weight: bold;
+
+      // *** External Vendor Design ***
+      // color: #3e434b;
+      // *** End External Vendor Design ***
+    }
+    // End Breadcrumb items separator (/)
+
+    // *** Only for Search and Re-engage ***
+    &:first-child{
+      pointer-events: none;
+      cursor: default;
+    }
+    // *** End Only for Search and Re-engage ***
+
+    &:last-child{
+      a{
+        color: $primary-color;
+        font-weight: bold;
+
+        // *** External Vendor Design ***
+        // color: #3e434b;
+        // *** End External Vendor Design ***
+      }
+    }
+  }
+  // End Breadcrumb items
+}
+// END BREADCRUMB -> JOB RESULTS PAGE CONTENT, JOB DETAILS PAGE CONTENT & BROWSE BY PAGE CONTENT
+
+
+// SIGN UP FOR JOB ALERTS EMAILS CONTENT -> JOB RESULTS PAGE CONTENT & BROWSE BY PAGE CONTENT
+
+// Envelope icon
+.fa-envelope-o{
+  color: $primary-color;
+  background-color: $white;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 100%;
+  font-size: 18px;
+
+  // *** External Vendor Design ***
+  // padding: 8px;
+  // margin-right: 10px;
+  // font-size: 13px;
+  // *** End External Vendor Design ***
+}
+// End Envelope icon
+
+// Sign Up For Job Alert Emails text
+#sign-up-widget{
+  color: $secondary-color;
+  font-weight: bold;
+  text-transform: capitalize; //<- Always
+}
+// End Sign Up For Job Alert Emails text
+
+// END SIGN UP FOR JOB ALERTS EMAILS CONTENT -> JOB RESULTS PAGE CONTENT & BROWSE BY PAGE CONTENT
+
+
+// PAGINATION
+.pagination{
+  // Pagination items
+  >li{
+    text-align: center;
+
+    // Pagination item
+    >a, >span, &:last-child>a, &:last-child>span, &:first-child>a, &:first-child>span{
+      // border-radius: 100%;
+      color: $secondary-color;
+      background-color: $body-color;
+      line-height: 35px;
+      padding: 0px;
+      height: 35px;
+      width: 35px;
+
+      @include on-event{
+        background-color: $hover-color;
+        color: $white;
+      }
+    }
+    // End Pagination item
+
+    // Previous caret icon
+    .previous-page-caret{
+      // font-size: 0px;
+      //
+      // &:before{
+      //   content: "\f0d9";
+      //   // content: "◀";
+      //   // font-size: 13px;
+      //   font-size: 22px;
+      //   font-family: FontAwesome;
+      //   font-style: normal;
+      //   font-weight: normal;
+      //   text-decoration: inherit;
+      // }
+    }
+    // End Previous caret icon
+
+    // Next caret icon
+    .next-page-caret{
+      // font-size: 0px;
+      //
+      // &:after{
+      //   content: "\f0da";
+      //   // content: "▶";
+      //   // font-size: 13px;
+      //   font-size: 22px;
+      //   font-family: FontAwesome;
+      //   font-style: normal;
+      //   font-weight: normal;
+      //   text-decoration: inherit;
+      // }
+    }
+    // End Next caret icon
+
+    // Pagination item activated
+    &.active{
+      >a{
+        background-color: $hover-color;
+        color: $white;
+
+        @include on-event{
+          background-color: shade($hover-color, 15%);
+        }
+      }
+    }
+    // End Pagination item activated
+  }
+  // End Pagination items
+}
+// END PAGINATION
+
+
+// JOBS COUNT TITLE
+.search-results-title{
+  font-weight: bold;
+  text-transform: none;
+
+  // *** External Vendor Design ***
+  // color: #3e434b;
+  //
+  // .jrp-jobs-count{
+  //   display: block;
+  //   font-weight: bold;
+  // }
+  //
+  // .jrp-job-company{
+  //
+  // }
+  // *** End External Vendor Design ***
+}
+// END JOBS COUNT TITLE
+
+
+// Table and facets container
+#jrp-desktop-table, #recommendation-table{
+  padding-top: 20px;
+}
+// End Table and facets container
+
+// FACETS
+
+// Facets container
+#jrp-desktop-facet-col{
+  background-color: $body-color;
+
+  // Facets container
+  #desktop-facets-container{
+    background-color: $body-color;
+
+    // Narrow search button
+    #narrow-search-header{
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      color: $text-color;
+      text-transform: uppercase;
+      background-color: $grey;
+      width: 100%;
+      margin-bottom: 20px;
+
+      // *** External Vendor Design ***
+      // color: #231f20;
+      // *** End External Vendor Design ***
+
+      @include on-event{
+        background-color: shade($grey, 30%);
+      }
+
+      // *** Full background all facets ***
+      @if $full-facet {
+        background-color: $facets-color;
+        color: $white;
+
+        @include on-event{
+          background-color: shade($facets-color, 30%);
+        }
+      }
+      // *** End Full background all facets ***
+
+      background-color: $facets-color;
+      color: $white;
+
+      @include on-event{
+        background-color: shade($facets-color, 30%);
+      }
+    }
+    // End Narrow search button
+
+    // Facets body
+    #desktop-facets-body{
+      background-color: $body-color;
+
+      // *** Full background all facets ***
+      @if $full-facet {
+        background-color: $facets-color;
+      }
+      // *** End Full background all facets ***
+
+      // Facets items
+      .desktop-facets{
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        border-radius: 0px;
+        // padding-bottom: 0px;
+        padding-bottom: 10px;
+
+        .facet-collapsable{
+          border: 5px solid $primary-color;
+          border-top: none;
+
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+
+          background-color: $primary-color;
+        }
+
+        &:last-child{
+          // padding-bottom: 0px;
+          padding-bottom: 10px;
+        }
+
+        // Facet header
+        .caret-facet-category-header{
+          color: $text-color;
+          background-color: $grey;
+          text-transform: uppercase;
+          font-weight: bold;
+          padding: 9px 0px 10px 20px;
+          margin: 0px;
+          width: 100%;
+
+          // *** External Vendor Design ***
+          // color: #231f20;
+          // border-top-left-radius: 10px;
+          // border-top-right-radius: 10px;
+          // *** End External Vendor Design ***
+
+          // *** Full background all facets ***
+          @if $full-facet {
+            background-color: $facets-color;
+            color: $white;
+          }
+          // *** End Full background all facets ***
+
+          background-color: $facets-color;
+          color: $white;
+
+          // *** Align header title with child items ***
+          // padding-left: 20px;
+          // End Align header title with child items ***
+
+          // *** Facet header border radius ***
+          // border-top-left-radius: 10px;
+          // border-top-right-radius: 10px;
+          // *** End Facet header border radius ***
+        }
+        // End Facet header
+
+        // Facets individual items
+        .caret-facet-item-container{
+          color: $text-color;
+          background-color: $white;
+          font-weight: bold;
+          border: 1px solid $grey-divider;
+          border-top: none;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          width: 100%;
+
+          // Facet individual text
+          a, span{
+            text-transform: capitalize;
+          }
+          // End Facet individual text
+
+          // *** External Vendor Design ***
+          // color: #000737;
+          // font-size: 14px;
+          // font-weight: normal;
+          // padding-top: 0px;
+          // padding-bottom: 0px;
+
+          // &:first-child{
+          //   padding-top: 15px;
+          // }
+          // *** End External Vendor Design ***
+
+          &:first-child{
+            border-top: 1px solid $grey-divider;
+          }
+
+          // Item caret >>
+          .caret-facet-accent{
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+            color: $text-color;
+          }
+          // End Item caret >>
+
+          // Facets individual item hover, focus, active
+          @include on-event{
+            background-color: tint($primary-color, 85%);
+            // color: $white;
+
+            .caret-facet-accent{
+              // color: $white;
+            }
+          }
+          // End Facets individual item hover, focus, active
+        }
+        // End Facets individual items
+
+        // Selected facet item
+        .selected-caret-facet-item-container{
+          color: $hover-color;
+          background-color: $body-color;
+          // border: none;
+          width: 100%;
+          margin: 0px;
+        }
+        // End Selected facet item
+      }
+      // End Facets items
+
+      // + View more button container
+      .view-facet-btn-container{
+        background-color: $white;
+        border: 1px solid $grey-divider;
+        border-top: none;
+        text-align: center;
+        width: 100%;
+        margin: 0px;
+        padding: 5px 0px;
+
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+
+
+        // *** View more button border radius ***
+        // border-bottom-left-radius: 5px;
+        // border-bottom-right-radius: 5px;
+        // *** End View more button border radius ***
+
+        // *** External Vendor Design ***
+        // padding: 0px;
+        // font-size: 14px;
+        // font-weight: normal;
+        // border-bottom-left-radius: 10px;
+        // border-bottom-right-radius: 10px;
+        // *** End External Vendor Design ***
+
+        // + View more button
+        .view_facet_text{
+          color: $primary-color;
+
+          @include on-event{
+            text-decoration: underline;
+          }
+
+          // Plus icon +
+          &:before{
+            content: '\f067';
+            font: normal normal normal 14px/1 FontAwesome;
+
+            // *** External Vendor Design ***
+            // content: '+';
+            // font: normal normal normal 14px/1 $primary-font;
+            // *** End External Vendor Design ***
+          }
+          // End Plus icon +
+        }
+        // End + View more button
+      }
+      // End + View more button container
+    }
+    // End Facets body
+  }
+  // End Facets container
+}
+
+// END FACETS
+
+
+// JOB RESULTS TABLE
+
+// Table
+#job-result-table, #recommendation-table{
+
+  // Table header
+  .job-result-header{
+    background-color: $fourth-color;
+    padding: 8px;
+    min-width: 165px;
+
+    // *** Full background all facets ***
+    @if $full-facet {
+      background-color: $facets-color;
+    }
+    // *** End Full background all facets ***
+
+    // Table header titles
+    a, span, .job-table-header-title, .job-table-header-location, .job-table-header-date-posted{
+      color: $primary-color;
+      text-transform: uppercase;
+      font-weight: bold;
+      display: inline-block;
+
+      // *** External Vendor Design ***
+      // color: #231f20;
+      // *** End External Vendor Design ***
+
+      // *** Full background all facets ***
+      @if $full-facet {
+        color: $white;
+      }
+      // *** End Full background all facets ***
+
+      @include on-event{
+        text-decoration: none;
+      }
+    }
+    // End Table header titles
+
+    // After Apply - Recomendation table header titles
+    .job-table-header-title, .job-table-header-location, .job-table-header-date-posted{
+      display: table-cell;
+    }
+    // End After Apply - Recomendation table header titles
+
+    // Table header sort icon
+    .glyphicon-menu-down, .glyphicon-menu-up{
+      color: $secondary-color;
+    }
+    // End Table header sort icon
+  }
+  // End Table header
+
+  // Job result row
+  .job-result{
+    font-size: 13px;
+    border-top: solid 1px $grey-divider;
+
+    // Job result row item
+    td{
+      // Job title
+      .job-result-title{
+        color: $primary-color;
+        font-weight: bold;
+
+        @include on-event{
+          background-color: transparent;
+          text-decoration: none;
+        }
+      }
+      // End Job title
+
+      // Job company, job location & job date posted
+      &.job-result-company-cell,
+      &.job-result-location-cell,
+      &.job-result-date-posted-cell{
+        color: $text-color;
+
+        // *** External Vendor Design ***
+        // color: #231f20;
+        // *** End External Vendor Design ***
+      }
+      // End Job company, job location & job date posted
+
+      //  After Apply - Recomendation table arrow
+      &.job-table-element-arrow{
+        a{
+          color: $hover-color;
+
+          @include on-event{
+            color: $hover-color;
+          }
+        }
+      }
+      // End  After Apply - Recomendation table arrow
+    }
+    // End Job result row item
+
+    // Job result row hover, focus, active
+    @include on-event{
+      background-color: tint($primary-color, 85%);
+
+      // Job title
+      td{
+        .job-result-title{
+          // color: $white;
+        }
+        // End Job title
+
+        // Job company, job location & job date posted
+        &.job-result-company-cell,
+        &.job-result-location-cell,
+        &.job-result-date-posted-cell{
+          // color: $white;
+        }
+        // End Job company, job location & job date posted
+
+        //  After Apply - Recomendation table arrow
+        &.job-table-element-arrow{
+          a{
+            @include on-event (true){
+              // color: $white;
+            }
+          }
+        }
+        // End  After Apply - Recomendation table arrow
+      }
+    }
+    // End Job result row hover, focus, active
+  }
+  // End Job result row
+}
+// End Table
+
+// JOB RESULTS TABLE
+
+
+// NO JOBS FOUND USING THE SUPPLIED CRITERIA MESSAGE
+
+// No jobs message
+#no-jobs-message{
+  padding: 30px 15px;
+  text-align: center;
+}
+// End No jobs message
+
+// END NO JOBS FOUND USING THE SUPPLIED CRITERIA MESSAGE
+
+
+// BACK & NEXT PAGE MOBILE BUTTONS
+
+// Back & next buttons container
+.jrp-pagination-row{
+  // Back & next buttons individual container
+  .mobile-pagination{
+    text-align: center;
+
+    // Back & next buttons
+    .next-mobile-page,
+    .previous-mobile-page{
+      @extend .internals-buttons;
+
+      @include on-event{
+        background-color: shade($hover-color, 50%);
+      }
+    }
+    // End Back & next buttons
+  }
+  // End Back & next buttons individual container
+}
+// End Back & next buttons container
+
+// END BACK & NEXT PAGE MOBILE BUTTONS
+
+
+@media (min-width: 992px){
+
+  // Facet header & Table header
+  #jrp-desktop-facet-col .caret-facet-category-header, #job-result-table .job-result-header{
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &, a, span, .job-table-header-title, .job-table-header-location, .job-table-header-date-posted{
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+  // End Facet header & Table header
+
+
+  // FACETS
+
+  // Table and facets container
+  #jrp-desktop-table{
+  }
+  // End Table and facets container
+
+  // Facets container
+  #jrp-desktop-facet-col{
+
+    // Facets container
+    #desktop-facets-container{
+      // Narrow search button
+      #narrow-search-header{
+        display: none;
+      }
+      // End Narrow search button
+
+      // Facets body
+      #desktop-facets-body{
+        margin-top: 0px;
+
+        // Full background all facets
+        @if $full-facet {
+          border-left: 15px solid $facets-color;
+          border-right: 15px solid $facets-color;
+        }
+        // End Full background all facets
+
+        // Facets items
+        .desktop-facets{
+          padding-bottom: 25px;
+
+          &:last-child{
+            padding-bottom: 25px;
+          }
+          // Facet header
+          .caret-facet-category-header{
+            padding: 10px 0px 10px 14px;
+
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+            // *** Full background all facets ***
+            @if $full-facet {
+              padding-left: 0px;
+            }
+            // *** End Full background all facets ***
+          }
+          // End Facet header
+
+          // Facets individual items
+          .caret-facet-item-container{
+            margin: 0px;
+          }
+          // End Facets individual items
+        }
+        // End Facets items
+      }
+      // End Facets body
+    }
+    // End Facets container
+  }
+
+  // FACETS
+
+  // Table
+  #job-result-table, #recommendation-table{
+    // Table header
+    .job-result-header{
+      min-width: 215px;
+    }
+    // End Table header
+  }
+  // End Table
+}
+
+
+@media (min-width: 1200px){
+
+  // Facet header & Table header
+  #jrp-desktop-facet-col .caret-facet-category-header, #job-result-table .job-result-header{
+
+    &, a, span, .job-table-header-title, .job-table-header-location, .job-table-header-date-posted{
+      font-size: 20px;
+    }
+  }
+  // End Facet header & Table header
+
+  // Table
+  #job-result-table, #recommendation-table{
+    // Table header
+    .job-result-header{
+      min-width: 265px;
+    }
+    // End Table header
+  }
+  // End Table
+
+}

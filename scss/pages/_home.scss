@@ -1,0 +1,34 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.landing-banner{
+  background: url("../img/content-banner.png") no-repeat center center;
+  background-size: cover;
+  height: 375px;
+  position: relative;
+}
+
+@media (min-width: 768px){
+
+  .landing-banner{
+    background: url("../img/content-banner.png") no-repeat center center;
+    background-size: cover;
+    height: 375px;
+    position: relative;
+  }
+
+  .content-banner{
+    background: url("../img/content-banner.png") no-repeat center center;
+
+  }
+
+}
+
+@media (min-width: 992px){
+
+}
+
+@media (min-width: 1200px){
+
+}
